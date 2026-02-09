@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="socket.io.min.js"></script>
+    <script src="group.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="leftPanelContent">
+      <h3>Group Whatsapp Messages</h3>
+      <input type="text" id="userId" placeholder="enter username" />
+      <button onclick="addUser()">addToGroup</button>
+      <ul id="usersList"></ul>
+    </div>
+
+    <div id="rightPanel">
+      <div id="rightPanelUserDisplay">
+        <h4 id="userName">Username:</h4>
+        
+      </div>
+
+      <div id="rightPanelUpContent">
+        <div id="displayingMessagesOfUsers"></div>
+      </div>
+
+      <div id="rightPanelDownContent">
+        <input type="text" id="textMessage" placeholder="enter messages" />
+        <button onclick="broadCasteMsg()">➤</button>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 10px;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+/* Main layout */
+body {
+  display: flex;
+  gap: 10px;
+}
+
+/* Left panel */
+#leftPanelContent {
+  width: 28%;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 10px;
+  height: calc(100vh - 20px);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* Input & button (left panel) */
+#leftPanelContent input,
+#leftPanelContent button {
+  height: 40px;
+  width: 100%;
+  padding: 0 12px;
+  font-size: 14px;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  outline: none;
+}
+
+#leftPanelContent button {
+  background: #25d366;   /* WhatsApp green */
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#leftPanelContent button:hover {
+  background: #1ebe5d;
+}
+
+/* Users list */
+
+
+/* Right panel */
+#rightPanel {
+  width: 75%;
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 50px);
+}
+
+/* Top of right panel */
+#rightPanelUserDisplay {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  background: #f3f3f3;
+}
+
+/* Middle messages area */
+#rightPanelUpContent {
+  flex: 1;
+  overflow-y: auto;          /* enable scrolling */
+  padding: 10px;
+  display: flex;
+  flex-direction: column;   /* normal top-to-bottom flow */
+}
+
+#displayingMessagesOfUsers {
+  margin-top: auto;         /* pushes messages to bottom when few */
+}
+
+/* Bottom input fixed */
+#rightPanelDownContent {
+  display: flex;
+  gap: 5px;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+  background: #fff;
+}
+
+#textMessage {
+  flex: 1;
+  padding: 8px;
+  border-radius: 20px; 
+}
+
+#rightPanelDownContent button {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background: #25d366;
+  color: white;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#rightPanelDownContent button:hover {
+  background: #1ebe5d;
+}
