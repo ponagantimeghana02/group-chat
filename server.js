@@ -11,9 +11,8 @@ app.use(express.static(__dirname + "/public"));
 httpServer.listen(3500, () => {
   console.log("listening");
 });
-let usersList = [];//users data 
-let chatData=[]
-
+let usersList = []; //users data
+let chatData = [];
 
 io.on("connection", (socket) => {
   console.log("connection established", socket.id);
@@ -24,17 +23,15 @@ io.on("connection", (socket) => {
 
     io.emit("sendUsersDataToClient", usersList);
   });
-   
-  socket.on("sendUserChatToServer",(obj)=>{
-chatData.push(obj)
-io.emit("sendGroupDataToClient",chatData)
-  })
 
+  socket.on("sendUserChatToServer", (obj) => {
+    chatData.push(obj);
+    io.emit("sendGroupDataToClient", chatData);
+  });
 
-
- socket.on("disconnect", () => {
+  socket.on("disconnect", () => {
     console.log("disconnection of user", socket.id);
     usersList = usersList.filter((user) => user.socketId != socket.id);
-  io.emit("sendUsersDataToClient",usersList)
+    io.emit("sendUsersDataToClient", usersList);
   });
 });

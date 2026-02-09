@@ -25,7 +25,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 /* Input & button (left panel) */
@@ -41,7 +41,7 @@ body {
 }
 
 #leftPanelContent button {
-  background: #25d366;   /* WhatsApp green */
+  background: #25d366; /* WhatsApp green */
   color: white;
   border: none;
   cursor: pointer;
@@ -52,7 +52,6 @@ body {
 }
 
 /* Users list */
-
 
 /* Right panel */
 #rightPanel {
@@ -73,14 +72,14 @@ body {
 /* Middle messages area */
 #rightPanelUpContent {
   flex: 1;
-  overflow-y: auto;          /* enable scrolling */
+  overflow-y: auto; /* enable scrolling */
   padding: 10px;
   display: flex;
-  flex-direction: column;   /* normal top-to-bottom flow */
+  flex-direction: column; /* normal top-to-bottom flow */
 }
 
 #displayingMessagesOfUsers {
-  margin-top: auto;         /* pushes messages to bottom when few */
+  margin-top: auto; /* pushes messages to bottom when few */
 }
 
 /* Bottom input fixed */
@@ -95,7 +94,7 @@ body {
 #textMessage {
   flex: 1;
   padding: 8px;
-  border-radius: 20px; 
+  border-radius: 20px;
 }
 
 #rightPanelDownContent button {
