@@ -79,7 +79,9 @@ body {
 }
 
 #displayingMessagesOfUsers {
-  margin-top: auto; /* pushes messages to bottom when few */
+  display: flex;
+  flex-direction: column;   /* stack messages top-to-bottom */
+  gap: 6px;                 /* small space between messages */
 }
 
 /* Bottom input fixed */
@@ -110,4 +112,27 @@ body {
 
 #rightPanelDownContent button:hover {
   background: #1ebe5d;
+}
+
+.msg {
+  display: inline-block;     /* shrink to content */
+  max-width: 70%;
+  padding: 6px 10px;         /* smaller padding */
+  border-radius: 8px;
+  font-size: 14px;
+  word-wrap: break-word;
+  white-space: pre-wrap;    /* wrap long text nicely */
+}
+
+.msg.me {
+  background: #dcf8c6;      /* WhatsApp green */
+  margin-left: auto;       /* push right */
+  border-top-right-radius: 0;
+}
+
+.msg.other {
+  background: #ffffff;     /* WhatsApp white */
+  margin-right: auto;     /* push left */
+  border-top-left-radius: 0;
+  border: 1px solid #ddd;
 }

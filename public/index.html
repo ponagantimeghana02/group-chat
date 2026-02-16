@@ -18,15 +18,15 @@
 
     <div id="rightPanel">
       <div id="rightPanelUserDisplay">
-        <h4 id="userName">Username:</h4>
+        <h4 id="userName">Group chat</h4>
       </div>
 
       <div id="rightPanelUpContent">
         <div id="displayingMessagesOfUsers"></div>
       </div>
 
-      <div id="rightPanelDownContent">
-        <input type="text" id="textMessage" placeholder="enter messages" />
+      <div id="rightPanelDownContent"> 
+        <input type="text" id="textMessage" placeholder="enter messages" onkeydown="if(event.key==='Enter') broadCasteMsg()"/>
         <button onclick="broadCasteMsg()">➤</button>
       </div>
     </div>
