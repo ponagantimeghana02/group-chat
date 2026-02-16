@@ -28,6 +28,12 @@ io.on("connection", (socket) => {
     chatData.push(obj);
     io.emit("sendGroupDataToClient", chatData);
   });
+socket.on("sendPrivateChatToServer", ({ msg, from, toSocketId }) => {
+    socket.to(toSocketId).emit("sendPrivateDataToClient", {
+      from,
+      msg,
+    });
+  });
 
   socket.on("disconnect", () => {
     console.log("disconnection of user", socket.id);
